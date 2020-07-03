@@ -12,5 +12,8 @@ In this session, we will be covering following topics:
 - C# Modularity - Config, Interface and Class
 - VS 2019 Git integration with Github
 
+Session Link:
+https://youtu.be/Lw2EWAeDIk4
+
 
 
