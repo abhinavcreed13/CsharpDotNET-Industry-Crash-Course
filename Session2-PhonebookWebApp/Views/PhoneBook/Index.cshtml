@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Phonebook";
+}
+
+@using Session2_PhonebookWebApp.Models
+@model UserModel
+
+<div class="main">
+    <br />
+    <div class="phonebook">
+        <h3>Complete Phonebook</h3>
+        @foreach (UserPhoneBook phonebook in Model.phonebook)
+        {
+            if (phonebook.Contacts.Count > 0)
+            {
+                <ul class="user">
+                    UserId:@phonebook.User.UserId, UserName: @phonebook.User.UserName
+                    @foreach (UserData contact in phonebook.Contacts)
+                    {
+                        <li>Person Id:@contact.UserId, Contact Name: @contact.UserName</li>
+                    }
+                </ul>
+            }
+        }
+    </div>
+    <div class="actions">
+        <br/>
+        <div class="insert">
+            <h4>Create New Record</h4>
+            <!-- HOMEWORK 3 -->
+            @Html.Partial("CreateRecord",Model.PhoneBookObject)
+        </div>
+        <br/>
+        <div class="update">
+            <h4>Update Record</h4>
+            <!-- HOMEWORK 4 -->
+            @Html.Partial("UpdateRecord", Model.PhoneBookObject)
+        </div>
+        <br/>
+        <div class="delete">
+            <h4>Delete Record</h4>
+            <!-- HOMEWORK 5 -->
+            @Html.Partial("DeleteRecord", Model.PhoneBookObject)
+        </div>
+    </div>
+</div>
+

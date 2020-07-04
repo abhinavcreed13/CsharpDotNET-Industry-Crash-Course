@@ -1,0 +1,9 @@
+﻿@using Session2_PhonebookWebApp.Models
+@model UserPhoneBookDB
+
+@using (@Html.BeginForm("Create", "PhoneBook", FormMethod.Post))
+{
+    <span>UserId:</span> @Html.TextBoxFor(m => m.UserId)
+    <span>PersonId:</span> @Html.TextBoxFor(m => m.PersonId)
+    <input type="submit" value="Submit" />
+}

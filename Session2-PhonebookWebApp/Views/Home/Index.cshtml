@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Phonebook App";
+}
+
+@using Session2_PhonebookWebApp.Models
+@model UserModel
+
+<div class="main">
+    <br/>
+    <div class="users">
+        <p>Users List:</p>
+        <ul class="userslist">
+            @foreach (UserData user in Model.users)
+            {
+                <li>UserID: @user.UserId, UserName: @user.UserName </li>
+            }
+        </ul>
+    </div>
+
+    <div class="actions">
+        <br/>
+        <div class="insert">
+            <h4>Create New User</h4>
+            @Html.Partial("CreateUser",Model.UserObject)
+        </div>
+        <br/>
+        <div class="update">
+            <!-- HOMEWORK 1 -->
+            <h4>Update User</h4>
+            @Html.Partial("UpdateUser", Model.UserObject)
+        </div>
+        <br/>
+        <div class="delete">
+            <!-- HOMEWORK 2 -->
+            <h4>Delete User</h4>
+            @Html.Partial("DeleteUser", Model.UserObject)
+        </div>
+    </div>
+
+</div>
