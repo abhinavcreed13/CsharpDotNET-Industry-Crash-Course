@@ -15,5 +15,18 @@ In this session, we will be covering following topics:
 Session Link:
 https://youtu.be/Lw2EWAeDIk4
 
+## Session 2
+
+In this session, we will be covering following topics:
+- SQL concepts - foreign keys, inner joins
+- C# Modularity - class libraries (DLL)
+- ASP.NET MVC 5 basics - structure, lifecycle, routing, controllers, views, razor pages, razor syntax, layouts
+- ASP.NET MVC 5 Model-View binding
+- ASP.NET MVC 5 with SQL server integration - data fetching, data manipulation, view binding, view rendering
+
+Session Link:
+https://youtu.be/WUMRt2sky-A
+
+
 
 
