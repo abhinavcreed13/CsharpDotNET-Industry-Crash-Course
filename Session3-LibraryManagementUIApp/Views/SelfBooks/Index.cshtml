@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Session3_LibraryManagementUIApp.Models.Book>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Book Management</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateAction")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(x => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.SerialNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Publisher)
+            </td>
+            <td>
+                @Html.ActionLink("Details","DetailsAction", new { bookId = item.BookId }) |
+                @Html.ActionLink("Edit","EditAction") |
+                @Html.ActionLink("Delete","DeleteAction") 
+            </td>
+        </tr>
+    }
+</table>
+

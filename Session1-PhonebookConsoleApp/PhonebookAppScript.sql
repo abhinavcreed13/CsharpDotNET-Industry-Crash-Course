@@ -104,10 +104,10 @@ AS
 GO
 
 -- HOMEWORK 4 (HARD)
-CREATE PROCEDURE getContactNamesForUser
+ALTER PROCEDURE getContactNamesForUser
 	@userId INT
 AS
-	SELECT A.user_name from user_data A
+	SELECT A.user_id, A.user_name from user_data A
 	INNER JOIN user_phone_book B
 	on A.user_id = B.person_id
 	where B.user_id = @userId and B.is_active = 1
@@ -115,3 +115,36 @@ GO
 
 EXECUTE getContactNamesForUser 2
 GO
+
+CREATE PROCEDURE addUser
+	@userName VARCHAR(200)
+AS
+	INSERT INTO user_data(user_name) VALUES (@userName)
+GO
+
+
+CREATE PROCEDURE addUserPhonebook
+	@userId INT,
+	@personId INT
+AS
+	INSERT INTO user_phone_book(user_id, person_id) VALUES (@userId, @personId)
+GO
+
+CREATE PROCEDURE updateUserPhonebook
+	@userId INT,
+	@personId INT,
+	@newPersonId INT
+AS
+	UPDATE user_phone_book
+	set person_id = @newPersonId
+	where user_id =@userId and person_id = @personId
+GO
+
+CREATE PROCEDURE deleteUserPhonebook
+	@userId INT,
+	@personId INT
+AS
+	DELETE from user_phone_book
+	where user_id =@userId and person_id = @personId
+GO
+
