@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session1-PhonebookConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2-DataAccessLayer", "Session2-DataAccessLayer\Session2-DataAccessLayer.csproj", "{AD6358F8-10C2-4FE2-AB09-BB5915209012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2,3-PhonebookWebApp", "Session2-PhonebookWebApp\Session2,3-PhonebookWebApp.csproj", "{902EEA56-8E35-4DAB-870D-EAF7AF16B3CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2,3-PhonebookWebApp", "Session2,3-PhonebookWebApp\Session2,3-PhonebookWebApp.csproj", "{902EEA56-8E35-4DAB-870D-EAF7AF16B3CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session4-LibraryManagementUIApp", "Session3-LibraryManagementUIApp\Session4-LibraryManagementUIApp.csproj", "{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session4-LibraryManagementUIApp", "Session4-LibraryManagementUIApp\Session4-LibraryManagementUIApp.csproj", "{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
