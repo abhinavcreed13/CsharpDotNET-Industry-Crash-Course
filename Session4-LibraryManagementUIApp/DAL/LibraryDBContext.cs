@@ -8,13 +8,15 @@ using System.Web;
 
 namespace Session3_LibraryManagementUIApp.DAL
 {
-    public class LibraryDBContext: DbContext
+    public class LibraryDBContext : DbContext
     {
-        public LibraryDBContext(): base("LibraryDBContext")
+        public LibraryDBContext() : base("LibraryDBContext")
         {
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<BorrowHistory> BorrowHistories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

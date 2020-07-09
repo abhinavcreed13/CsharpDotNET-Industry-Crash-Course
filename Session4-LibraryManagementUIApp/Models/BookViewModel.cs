@@ -6,22 +6,19 @@ using System.Web;
 
 namespace Session3_LibraryManagementUIApp.Models
 {
-    public class Book
+    public class BookViewModel
     {
-        [Key]
         public int BookId { get; set; }
 
-        [Required]
         public string Title { get; set; }
 
-        [Required]
-        [Display(Name="Serial Number")]
+        [Display(Name = "Serial Number")]
         public string SerialNumber { get; set; }
 
         public string Author { get; set; }
 
         public string Publisher { get; set; }
 
-        public ICollection<BorrowHistory> BorrowHistories { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }
