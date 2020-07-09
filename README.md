@@ -27,6 +27,16 @@ In this session, we will be covering following topics:
 Session Link:
 https://youtu.be/WUMRt2sky-A
 
+## Session 3
+
+In this session, we will be covering following topics:
+- C#.NET Entity Framework Basic Intro
+- ASP.NET MVC 5 @Html Helpers - ActionLink, BeginForm, LabelFor, TextboxFor, Model binding
+- ASP.NET MVC 5 Multi-page design - Controllers + Views
+- ASP.NET MVC 5 Partial Pages + Model bindings
+
+Session Link:
+https://www.youtube.com/watch?v=OD2sNn9RRBY
 
 
 
