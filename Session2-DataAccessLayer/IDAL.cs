@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,6 @@ namespace Session2_DataAccessLayer
     {
         DataTable ExecuteQuery(string query);
         DataTable ExecuteStoredProcedure(string procedureName);
-        DataTable ExecuteStoredProcedure(string procedureName, List<SqlParameter> parameters);
+        DataTable ExecuteStoredProcedure<T>(string procedureName, List<T> parameters) where T: DbParameter;
     }
 }

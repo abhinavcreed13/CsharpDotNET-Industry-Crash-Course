@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2,3-PhonebookWebApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session4-LibraryManagementUIApp", "Session4-LibraryManagementUIApp\Session4-LibraryManagementUIApp.csproj", "{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session6-LibraryManagementUIMysqlDAL", "Session6-LibraryManagementUIMysqlDAL\Session6-LibraryManagementUIMysqlDAL.csproj", "{709D23B8-0C42-4445-955E-CDB870146FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session8-LibraryManagementUIMysqlEF6", "Session8-LibraryManagementUIMysqlEF6\Session8-LibraryManagementUIMysqlEF6.csproj", "{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709D23B8-0C42-4445-955E-CDB870146FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709D23B8-0C42-4445-955E-CDB870146FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709D23B8-0C42-4445-955E-CDB870146FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709D23B8-0C42-4445-955E-CDB870146FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -72,6 +73,33 @@ namespace Session2_DataAccessLayer
                 SqlCommand cmd = new SqlCommand(procedureName, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 foreach (SqlParameter param in parameters)
+                {
+                    cmd.Parameters.Add(param);
+                }
+                adapter.SelectCommand = cmd;
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return data;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public DataTable ExecuteStoredProcedure<T>(string procedureName, List<T> parameters) where T : DbParameter
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable data = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(procedureName, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (DbParameter param in parameters)
                 {
                     cmd.Parameters.Add(param);
                 }
