@@ -88,6 +88,7 @@
 
 - Installing MySQL community edition
 	- Installing MySQL workbench
+
 - Create your MySQL scheme
 	- Create Statement: 
 		- Book, Customer, BorrowHistory
@@ -96,6 +97,7 @@
 		- GetAll, Get for Book, Customer
 		- Create, Update, delete
 			- Book, Customer (HW)
+
 - Connecting MySQL with C# DAL layer
 	- Installing MySql.Data package
 	- C# Concept: Generic Function + Constraint
