@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session8-LibraryManagementU
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{93E1C310-23E3-416A-B2F4-3339A5427008}"
 	ProjectSection(SolutionItems) = preProject
-		Notes.md = Notes.md
+		SESSION NOTES.md = SESSION NOTES.md
 	EndProjectSection
 EndProject
 Global

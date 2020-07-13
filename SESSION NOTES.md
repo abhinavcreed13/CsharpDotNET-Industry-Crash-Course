@@ -1,5 +1,54 @@
 # Session Notes
 
+## Outline: PhoneBook Console App (Backend + ADO.NET framework)
+
+- BACKEND:
+	1. SQL Server Intro - SSMS
+	2. Phonebook Application DB Setup
+	3. SQL DDL queries - Create, drop, Insert
+	4. SQL DML queries - Select/Update/Delete
+	5. Stored Procedures - SelectAll/SelectSome
+
+- MIDDLEWARE (CONSOLE APPLICATION):
+	1. Visual Studio Intro
+	2. Connecting to SQL Server using C#
+	3. Fetch records using query (online mode)
+	4. Fetch records using query (offline mode)
+	5. Fetch records using stored procedure - AllUsers/ParticularUser
+	6. Making Code Modular - Config, Interface, Class
+	7. Github Integration (Extra time if possible)
+
+## OUTLINE (Phonebook UI App)
+
+- SQL Server - Foreign keys, Join statements
+
+- C# Modularity - Class libraries
+	- DataAccessLayer (DAL)
+
+- ASP.NET MVC concepts
+	- Request, Response Lifecycle
+	- Routing, Controllers, Views
+	- Razor pages
+	- Models
+	- Rendering Views with dummy data
+
+- ASP.NET MVC with SQL Server
+	- Getting data with DAL layer
+	- Offline manipulation of data
+	- Rendering Views with data
+	- Manipulating data in Razor pages
+
+- ASP.NET MVC with HTML helpers (CRUD)
+	- Insert operation on UserData
+	- Redirection + Partial Pages
+	- Update operation on UserData (Homework 1)
+	- Delete operation on UserData (Homework 2)
+	- Multiple Page Design
+	- New Page + Controller + Routing
+	- Insert Operation on UserPhoneBook (HW 3)
+	- Update Operation (Homework 4)
+	- Delete Operation (Homework 5)
+
 ## OUTLINE (ASP.NET MVC 5 + Entity Framework 6)
 ### (Library Management UI Application)
 
@@ -67,12 +116,13 @@
 
 ## Library Management UI Application + MySQL EF 6
 
-- Install Entity Framework 6
-- Install Mysql.data.entity
-- Create Models: Book, Customer
-- Create DBContext + DBInitializer 
-- Configuration + Migration
-- DBInitilization using update-database
+- Installation & Configuration
+	- Install Entity Framework 6
+	- Install Mysql.data.entity
+	- Create Models: Book, Customer
+	- Create DBContext + DBInitializer 
+	- Configuration + Migration
+	- DBInitilization using update-database
 
 - Implement books management (scaffolding trick)
 
