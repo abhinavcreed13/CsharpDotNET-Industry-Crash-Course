@@ -1,6 +1,8 @@
-# CsharpDotNET-Industry-Crash-Course
+# C# .NET Industry Crash Course
 
 Welcome to the C#.NET Industry Crash Course.
+
+Complete Youtube Playlist: [https://www.youtube.com/watch?v=Lw2EWAeDIk4&list=PLgOISYWDO2LMWCda_xFm7HS4xMHdY5AKl](https://www.youtube.com/watch?v=Lw2EWAeDIk4&list=PLgOISYWDO2LMWCda_xFm7HS4xMHdY5AKl)
 
 ## Session 1
 
@@ -37,6 +39,20 @@ In this session, we will be covering following topics:
 
 Session Link:
 https://www.youtube.com/watch?v=OD2sNn9RRBY
+
+## Session 4
+
+In this session, we will be covering following topics by creating a library management UI application:
+- Entity Framework 6 Introduction
+- Library Management Application Design
+- Entity Framework 6 Basics: Installation, Configuration, DBContext, Data Initialisation
+- C# Concepts: Inheritance, Function overriding
+- Integrating ASP.NET MVC 5 application with EF 6
+- More @HTML helpers: ValidationMessage, EditorFor, ClassAttributes
+- Create operation with EF 6 
+
+Session Link:
+https://www.youtube.com/watch?v=3DJKDiA0Ax0
 
 
 
