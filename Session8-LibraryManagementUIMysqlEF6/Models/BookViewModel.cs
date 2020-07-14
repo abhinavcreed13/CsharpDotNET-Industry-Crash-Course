@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Session8_LibraryManagementUIMysqlEF6.Models
 {
-    public class Book
+    public class BookViewModel
     {
         [Key]
         public int BookId { get; set; }
@@ -22,7 +22,6 @@ namespace Session8_LibraryManagementUIMysqlEF6.Models
 
         public string Publisher { get; set; }
 
-        //Navigation Property
-        public ICollection<BorrowHistory> BorrowHistories { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }

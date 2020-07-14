@@ -129,3 +129,10 @@
 - Implement books management (scaffolding trick)
 
 - Implement customer management (scaffolding trick)
+
+- Implement Borrow Histories
+	- Update-database + Avoid Seed
+	- Book Availability
+	- Scaffolding Trick
+	- Borrow Book
+	- Return Book

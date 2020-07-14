@@ -15,7 +15,7 @@
 
         protected override void Seed(Session8_LibraryManagementUIMysqlEF6.DAL.LibraryDBContext context)
         {
-            LibraryDataInitilizer.Seed(context);
+            //LibraryDataInitilizer.Seed(context);
         }
     }
 }

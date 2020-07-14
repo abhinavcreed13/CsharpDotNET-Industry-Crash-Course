@@ -18,7 +18,17 @@ namespace Session8_LibraryManagementUIMysqlEF6.Controllers
         // GET: Books
         public ActionResult Index()
         {
-            return View(db.Books.ToList());
+            var books = db.Books.Include(p => p.BorrowHistories);
+            var availableBooks = books.Select(b => new BookViewModel
+            {
+                BookId = b.BookId,
+                Title = b.Title,
+                SerialNumber = b.SerialNumber,
+                Author = b.Author,
+                Publisher = b.Publisher,
+                IsAvailable = !b.BorrowHistories.Any(history => history.ReturnDate == null)
+            }).ToList();
+            return View(availableBooks);
         }
 
         // GET: Books/Details/5
