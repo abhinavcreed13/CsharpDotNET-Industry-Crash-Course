@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2-DataAccessLayer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2,3-PhonebookWebApp", "Session2,3-PhonebookWebApp\Session2,3-PhonebookWebApp.csproj", "{902EEA56-8E35-4DAB-870D-EAF7AF16B3CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session4-LibraryManagementUIApp", "Session4-LibraryManagementUIApp\Session4-LibraryManagementUIApp.csproj", "{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session4,5-LibraryManagementUIApp", "Session4,5-LibraryManagementUIApp\Session4,5-LibraryManagementUIApp.csproj", "{FDE62E1D-83D4-48E0-A2D6-8AF704E2F76E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session6-LibraryManagementUIMysqlDAL", "Session6-LibraryManagementUIMysqlDAL\Session6-LibraryManagementUIMysqlDAL.csproj", "{709D23B8-0C42-4445-955E-CDB870146FAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session6,7-LibraryManagementUIMysqlDAL", "Session6,7-LibraryManagementUIMysqlDAL\Session6,7-LibraryManagementUIMysqlDAL.csproj", "{709D23B8-0C42-4445-955E-CDB870146FAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session8-LibraryManagementUIMysqlEF6", "Session8-LibraryManagementUIMysqlEF6\Session8-LibraryManagementUIMysqlEF6.csproj", "{DBAA47D9-2489-4CD6-933E-2F93FC7BB32F}"
 EndProject
