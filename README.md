@@ -54,5 +54,14 @@ In this session, we will be covering following topics by creating a library mana
 Session Link:
 https://www.youtube.com/watch?v=3DJKDiA0Ax0
 
+## Session 5
 
+In this session, we will be covering following topics by creating a Library Management UI application:
+- Correctly routing object values in Razor pages
+- Details operation using EF 6
+- Edit operation using EF 6
+- C# Delegates: Action, Func and Predicate
+
+Session Link:
+https://www.youtube.com/watch?v=E-mKfyvUUzQ
 
