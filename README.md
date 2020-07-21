@@ -29,6 +29,7 @@ In this session, we will be covering following topics:
 - ASP.NET MVC 5 with SQL server integration - data fetching, data manipulation, view binding, view rendering
 
 Project: [Project2-DataAccessLayer](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project2-DataAccessLayer)
+
 Project: [Project3-PhonebookWebApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project3-PhonebookWebApp)
 
 Session Link:
