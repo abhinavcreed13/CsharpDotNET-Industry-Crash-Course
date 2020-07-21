@@ -72,6 +72,8 @@ In this session, we will be covering following topics by creating a Library Mana
 - Edit operation using EF 6
 - C# Delegates: Action, Func and Predicate
 
+Project: [Project4-LibraryManagementUIApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project4-LibraryManagementUIApp)
+
 Session Link:
 https://www.youtube.com/watch?v=E-mKfyvUUzQ
 
