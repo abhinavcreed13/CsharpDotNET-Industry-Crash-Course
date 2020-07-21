@@ -136,3 +136,21 @@
 	- Scaffolding Trick
 	- Borrow Book
 	- Return Book
+
+## OUTLINE - Movie Price Tracker Application + REST API
+
+- Planning the application
+- Create The Movie DB account
+	- Register for APIkey
+	- Test example api using postman with APIkey
+- Create MoviePriceTrackerRestAPI Project
+	- Create testapi with dummy data
+	- Consuming MovieDB Rest API in C#
+		- HttpClient
+		- RestSharp + JSON Model
+	- URLBuilder + MovieDbWrapper (Configurable)
+	- MovieDetailsAPI with configurable id
+- Create MoviePriceTrackerWebClient (MVC 5)
+	- Consume MoviePriceTrackerRestAPI
+	- Fixing poster path + Details View
+	- Custom configurations - ApiUrls + Getter/Setter
