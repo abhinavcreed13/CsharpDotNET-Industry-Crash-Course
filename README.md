@@ -14,6 +14,8 @@ In this session, we will be covering following topics:
 - C# Modularity - Config, Interface and Class
 - VS 2019 Git integration with Github
 
+Project: [Project1-PhonebookConsoleApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project1-PhonebookConsoleApp)
+
 Session Link:
 https://youtu.be/Lw2EWAeDIk4
 
@@ -26,6 +28,9 @@ In this session, we will be covering following topics:
 - ASP.NET MVC 5 Model-View binding
 - ASP.NET MVC 5 with SQL server integration - data fetching, data manipulation, view binding, view rendering
 
+Project: [Project2-DataAccessLayer](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project2-DataAccessLayer)
+Project: [Project3-PhonebookWebApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project3-PhonebookWebApp)
+
 Session Link:
 https://youtu.be/WUMRt2sky-A
 
@@ -36,6 +41,8 @@ In this session, we will be covering following topics:
 - ASP.NET MVC 5 @Html Helpers - ActionLink, BeginForm, LabelFor, TextboxFor, Model binding
 - ASP.NET MVC 5 Multi-page design - Controllers + Views
 - ASP.NET MVC 5 Partial Pages + Model bindings
+
+Project: [Project3-PhonebookWebApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project3-PhonebookWebApp)
 
 Session Link:
 https://www.youtube.com/watch?v=OD2sNn9RRBY
@@ -49,7 +56,9 @@ In this session, we will be covering following topics by creating a library mana
 - C# Concepts: Inheritance, Function overriding
 - Integrating ASP.NET MVC 5 application with EF 6
 - More @HTML helpers: ValidationMessage, EditorFor, ClassAttributes
-- Create operation with EF 6 
+- Create operation with EF 6
+
+Project: [Project4-LibraryManagementUIApp](https://github.com/abhinavcreed13/CsharpDotNET-Industry-Crash-Course/tree/master/Project4-LibraryManagementUIApp)
 
 Session Link:
 https://www.youtube.com/watch?v=3DJKDiA0Ax0
