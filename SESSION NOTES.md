@@ -154,3 +154,18 @@
 	- Consume MoviePriceTrackerRestAPI
 	- Fixing poster path + Details View
 	- Custom configurations - ApiUrls + Getter/Setter
+- Adding Movie Search View
+	- Create Search Movie API
+	- Consuming API with HttpPost + Results
+	- Improving UI
+- Modifying API to include movie id
+- Track Movie Price
+	- Adding dynamic UI update - javascript + jquery
+	- Adding movie to track price
+		- Create TrackMovie Api
+		- Using ajax to hit API from JS
+		- Adding random price from API
+	- Show tracking in search results
+	- Remove tracking
+		- Using Javascript
+		- Using MVC route

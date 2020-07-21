@@ -9,6 +9,9 @@ namespace MoviePriceTrackerWebClient.Models
 {
     public class MovieDetailsViewModel
     {
+        [JsonProperty(PropertyName = "id")]
+        public int Id { get; set; }
+
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
@@ -18,5 +21,9 @@ namespace MoviePriceTrackerWebClient.Models
         [JsonProperty(PropertyName = "poster_path")]
         [Display(Name = "Poster")]
         public string PosterPath { get; set; }
+
+        public int Price { get; set; }
+
+        public bool IsTracked { get; set; }
     }
 }

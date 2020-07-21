@@ -1,5 +1,6 @@
 ﻿using MoviePriceTrackerWebClient.Helpers;
 using MoviePriceTrackerWebClient.Models;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,31 @@ namespace MoviePriceTrackerWebClient.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(string searchbox)
+        {
+            var baseUrl = CustomConfigs.MovieBaseUrl;
+            var searchUrl = CustomConfigs.SearchUrl;
+            searchUrl = string.Format(baseUrl, searchUrl);
+
+            var client = new RestClient(searchUrl);
+            var request = new RestRequest(Method.POST);
+
+            var data = new
+            {
+                query = searchbox
+            };
+
+            request.AddJsonBody(data);
+            var viewModel = client.Execute<IEnumerable<MovieDetailsViewModel>>(request);
+            var trackedMovies = MovieTrackingController.TrackingMovieIds;
+            foreach(var details in viewModel.Data)
+            {
+                details.IsTracked = trackedMovies.AsEnumerable().Any(val => val == details.Id);
+            }
+            return View("SearchList", viewModel.Data);
         }
 
         // GET: Movie/Details/5

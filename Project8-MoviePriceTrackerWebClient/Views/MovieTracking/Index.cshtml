@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MoviePriceTrackerWebClient.Models.MovieDetailsViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tracked Movies</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PosterPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Overview)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@item.PosterPath" style="width:80px;height:120px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td width="600">
+                @Html.DisplayFor(modelItem => item.Overview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) AUD
+            </td>
+            <td>
+                @Html.ActionLink("Remove", "Remove", new { id = item.Id }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -18,7 +18,7 @@ namespace MoviePriceTrackerRestAPI.Helpers
 
         public static string GetApiKey()
         {
-            return "";
+            return "8f75bbc25b1c0ad27a1f06f54bd64c7f";
         }
 
         public static string GetMovieDetailsUrl(int id)
@@ -33,6 +33,16 @@ namespace MoviePriceTrackerRestAPI.Helpers
         {
             var baseUrl = GetConfigValue("movieDBposterPathBaseUrl");
             return string.Format(baseUrl, url);
+        }
+
+        public static string GetSearchMovieUrl(string keyword)
+        {
+            var searchMovieUrl = GetConfigValue("searchMovie");
+            searchMovieUrl = string.Format(baseURL, searchMovieUrl, GetApiKey());
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+            queryString.Add("query", keyword);
+            searchMovieUrl += "&"+queryString.ToString();
+            return searchMovieUrl;
         }
     }
 }

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<MoviePriceTrackerWebClient.Models.MovieDetailsViewModel>
+
+@{
+    ViewBag.Title = "SearchList";
+}
+
+@Html.Partial("SearchBox")
+
+<h3>Search Results</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PosterPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Overview)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@item.PosterPath" style="width:80px;height:120px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td width="750">
+                @Html.DisplayFor(modelItem => item.Overview)
+            </td>
+            <td>
+                @if (!item.IsTracked)
+                {
+                    <button class="btn btn-primary" onclick="trackMovie(this,@item.Id)">
+                        Track Price
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-success" onclick="trackMovie(this,@item.Id)">
+                        Tracking
+                    </button>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        function trackMovie(btn, movieId) {
+            console.log(movieId);
+            var $btn = $(btn);
+            if ($btn.hasClass('btn-primary')) {
+                $(btn).removeClass('btn-primary').addClass('btn-success');
+                $(btn).text('Tracking');
+                // update system
+                $.post("http://localhost:60525/api/movieapi/trackmovie/",
+                    { movieId: movieId },
+                    function (response) {
+                        console.log(response);
+                    }
+                );
+            }
+            else {
+                $(btn).removeClass('btn-success').addClass('btn-primary');
+                $(btn).text('Track Price');
+                // update system
+                // update system
+                $.post("http://localhost:60525/api/movieapi/untrackmovie/",
+                    { movieId: movieId },
+                    function (response) {
+                        console.log(response);
+                    }
+                );
+            }
+        }
+    </script>    
+}

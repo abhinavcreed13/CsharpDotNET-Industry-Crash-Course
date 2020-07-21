@@ -22,5 +22,14 @@ namespace MoviePriceTrackerRestAPI.Models
 
         [JsonProperty(PropertyName = "poster_path")]
         public string PosterPath { get; set; }
+
+        public int Price { get; set; }
+
+        public MovieDetails()
+        {
+            //Random price
+            Random _random = new Random();
+            Price = _random.Next(100);
+        }
     }
 }
