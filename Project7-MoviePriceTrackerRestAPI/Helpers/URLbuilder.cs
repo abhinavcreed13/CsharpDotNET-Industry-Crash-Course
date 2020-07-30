@@ -18,7 +18,7 @@ namespace MoviePriceTrackerRestAPI.Helpers
 
         public static string GetApiKey()
         {
-            return "";
+            return "8f75bbc25b1c0ad27a1f06f54bd64c7f";
         }
 
         public static string GetMovieDetailsUrl(int id)
