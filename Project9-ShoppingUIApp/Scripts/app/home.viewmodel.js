@@ -3,6 +3,8 @@
 
     self.header = ko.observable("");
 
+    self.phoneData = ko.observable([]);
+
     Sammy(function () {
         this.get('#home', function () {
             // Make a call to the protected Web API by passing in a Bearer Authorization Header
@@ -15,6 +17,20 @@
                 //},
                 success: function (data) {
                     self.header(data);
+                }
+            });
+
+            //get all phone data
+            $.ajax({
+                method: 'get',
+                url: app.dataModel.getPhoneDataUrl,
+                contentType: "application/json; charset=utf-8",
+                //headers: {
+                //    'Authorization': 'Bearer ' + app.dataModel.getAccessToken()
+                //},
+                success: function (data) {
+                    // update data on UI
+                    self.phoneData(data);
                 }
             });
         });

@@ -169,3 +169,28 @@
 	- Remove tracking
 		- Using Javascript
 		- Using MVC route
+
+
+## OUTLINE (Mobile Shopping Application - SPA)
+
+- Planning your application
+- Using SPA using VS template
+	- Understanding structure
+	- Understanding routing + viewmodels (knockout)
+	- Disabling Authentication on Home Page
+	- Adding DataApiController + Connecting with UI
+- Generating Mobile Phone Data (.NET CORE 3)
+	- Connecting flexi API + getting data + random price
+	- Connecting EntityFrameworkCore
+	- Dumping data to SQL server
+- Enhancing Application with data
+	- Connecting EF6 with UI 
+		- Code-First pattern (won't work!)
+		- Database-First pattern
+	- Create + Test GetPhoneData API
+	- AJAX + ko 'foreach' binding (dynamic!)
+	- Add to cart button with ko 'attr' binding
+- Dynamic Shopping Cart
+
+
+
