@@ -29,7 +29,9 @@
                 //    'Authorization': 'Bearer ' + app.dataModel.getAccessToken()
                 //},
                 success: function (data) {
-                    // update data on UI
+                    $(data).each(function (item) {
+                        this.isAddedInCart = ko.observable(this.isAddedInCart);
+                    });
                     self.phoneData(data);
                 }
             });
@@ -38,6 +40,34 @@
             this.app.runRoute('get', '#home');
         });
     });
+
+    self.addToCart = function (record) {
+        $.ajax({
+            method: 'post',
+            url: app.dataModel.addToCartUrl,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(record),
+            success: function (data) {
+                if (data.added) {
+                    record.isAddedInCart(true);
+                }
+            }
+        });
+    }
+
+    self.removeFromCart = function (record) {
+        $.ajax({
+            method: 'post',
+            url: app.dataModel.removeFromCart,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(record),
+            success: function (data) {
+                if (data.removed) {
+                    record.isAddedInCart(false);
+                }
+            }
+        });
+    }
 
     return self;
 }

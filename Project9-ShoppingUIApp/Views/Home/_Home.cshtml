@@ -25,11 +25,15 @@
                 <td data-bind="text: type"></td>
                 <td data-bind="text: price"></td>
                 <td>
-                    <button class="btn btn-primary" data-bind="attr: {'device-id': deviceNumber}">Add to cart</button>
+                    <!-- ko if: isAddedInCart() -->
+                        <button class="btn btn-success" data-bind="click: $parent.removeFromCart.bind($data)">Remove from cart</button>
+                    <!-- /ko -->
+                    <!-- ko if: !isAddedInCart() -->
+                        <button class="btn btn-primary" data-bind="click: $parent.addToCart.bind($data)">Add to cart</button>
+                    <!-- /ko -->
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
 <!-- /ko -->

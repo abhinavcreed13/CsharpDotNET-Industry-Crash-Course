@@ -231,6 +231,8 @@
     <Compile Include="Models\MobilePhoneData.cs">
       <DependentUpon>ShoppingDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MobilePhoneDataViewModel.cs" />
+    <Compile Include="Models\ParametersModel.cs" />
     <Compile Include="Models\ShoppingDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -272,6 +274,7 @@
       <DependentUpon>ShoppingDataModel.edmx</DependentUpon>
       <LastGenOutput>ShoppingDataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\app\cart.viewmodel.js" />
     <Content Include="Scripts\app\_run.js" />
     <Content Include="Scripts\app\app.datamodel.js" />
     <Content Include="Scripts\app\app.viewmodel.js" />
@@ -355,6 +358,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.validation.min.js.map" />
+    <Content Include="Views\Home\_Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

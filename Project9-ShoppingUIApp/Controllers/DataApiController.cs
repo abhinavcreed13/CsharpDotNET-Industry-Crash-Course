@@ -12,6 +12,8 @@ namespace Project9_ShoppingUIApp.Controllers
     {
         creedEntities _db;
 
+        public static List<MobilePhoneDataViewModel> cartItems = new List<MobilePhoneDataViewModel>();
+
         public DataApiController() {
             _db = new creedEntities();
         }
@@ -21,9 +23,60 @@ namespace Project9_ShoppingUIApp.Controllers
             return "Welcome to Mobile Shop!";
         }
 
-        public List<MobilePhoneData> GetPhoneData()
+        public List<MobilePhoneDataViewModel> GetPhoneData()
         {
-            return _db.MobilePhoneDatas.ToList();
+            var data = _db.MobilePhoneDatas.ToList();
+            var dataToSend = data.Select(row => new MobilePhoneDataViewModel
+            {
+                DeviceName = row.DeviceName,
+                DeviceNumber = row.DeviceNumber,
+                Brand = row.Brand,
+                Price = row.Price,
+                Status = row.Status,
+                Type = row.Type,
+                IsAddedInCart = cartItems.Any(item => item.DeviceNumber == row.DeviceNumber)
+            }).ToList();
+            return dataToSend;
+        }
+        
+        [HttpPost]
+        public object AddToCart(MobilePhoneDataViewModel phoneObject)
+        {
+            try
+            {
+                if (!cartItems.Any(item => item.DeviceNumber == phoneObject.DeviceNumber))
+                {
+                    cartItems.Add(phoneObject);
+                }
+                return new
+                {
+                    added = true
+                };
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        public object RemoveFromCart(MobilePhoneDataViewModel phoneObject)
+        {
+            try
+            {
+                if (!cartItems.Any(item => item.DeviceNumber == phoneObject.DeviceNumber))
+                {
+                    cartItems.Remove(phoneObject);
+                }
+                return new
+                {
+                    removed = true
+                };
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

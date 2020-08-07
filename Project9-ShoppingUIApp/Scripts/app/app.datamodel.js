@@ -8,6 +8,10 @@
 
     self.getPhoneDataUrl = "/api/DataApi/GetPhoneData";
 
+    self.addToCartUrl = "/api/DataApi/AddToCart";
+
+    self.removeFromCart = "/api/DataApi/RemoveFromCart";
+
     // Route operations
 
     // Other private operations
