@@ -1,7 +1,35 @@
 ﻿<!-- ko with: cart -->
-<div class="row">
-    <div class="col-md-12">
-        <h2>Your cart</h2>
+<div data-bind="visible: $parent.dataModel.showCart">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Your cart</h2>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Device Name</th>
+                    <th>Status</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: cartItems">
+                <tr>
+                    <td data-bind="text: brand"></td>
+                    <td data-bind="text: deviceName"></td>
+                    <td data-bind="text: status"></td>
+                    <td data-bind="text: type"></td>
+                    <td data-bind="text: price"></td>
+                    <td>
+                        <button class="btn btn-primary" data-bind="click: $parent.removeFromCart.bind($data, $parent)">Remove from cart</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 <!-- /ko -->

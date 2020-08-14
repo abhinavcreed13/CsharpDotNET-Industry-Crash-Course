@@ -5,6 +5,8 @@
 
     self.phoneData = ko.observable([]);
 
+    dataModel.showHome = ko.observable(true);
+
     Sammy(function () {
         this.get('#home', function () {
             // Make a call to the protected Web API by passing in a Bearer Authorization Header
@@ -33,6 +35,8 @@
                         this.isAddedInCart = ko.observable(this.isAddedInCart);
                     });
                     self.phoneData(data);
+                    dataModel.showHome(true);
+                    dataModel.showCart(false);
                 }
             });
         });

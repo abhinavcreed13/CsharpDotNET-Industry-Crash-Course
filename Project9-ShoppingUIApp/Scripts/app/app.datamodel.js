@@ -12,6 +12,8 @@
 
     self.removeFromCart = "/api/DataApi/RemoveFromCart";
 
+    self.getCartItems = "/api/DataApi/GetCartItems";
+
     // Route operations
 
     // Other private operations

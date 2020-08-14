@@ -38,6 +38,11 @@ namespace Project9_ShoppingUIApp.Controllers
             }).ToList();
             return dataToSend;
         }
+
+        public List<MobilePhoneDataViewModel> GetCartItems()
+        {
+            return cartItems;
+        }
         
         [HttpPost]
         public object AddToCart(MobilePhoneDataViewModel phoneObject)
@@ -47,11 +52,12 @@ namespace Project9_ShoppingUIApp.Controllers
                 if (!cartItems.Any(item => item.DeviceNumber == phoneObject.DeviceNumber))
                 {
                     cartItems.Add(phoneObject);
+                    return new
+                    {
+                        added = true
+                    };
                 }
-                return new
-                {
-                    added = true
-                };
+                return null;
             }
             catch(Exception ex)
             {
@@ -64,14 +70,15 @@ namespace Project9_ShoppingUIApp.Controllers
         {
             try
             {
-                if (!cartItems.Any(item => item.DeviceNumber == phoneObject.DeviceNumber))
+                if (cartItems.Any(item => item.DeviceNumber == phoneObject.DeviceNumber))
                 {
-                    cartItems.Remove(phoneObject);
+                    cartItems.RemoveAll(item => item.DeviceNumber == phoneObject.DeviceNumber);
+                    return new
+                    {
+                        removed = true
+                    };
                 }
-                return new
-                {
-                    removed = true
-                };
+                return null;
             }
             catch (Exception ex)
             {
