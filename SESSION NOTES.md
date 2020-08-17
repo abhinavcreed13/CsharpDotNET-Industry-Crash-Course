@@ -191,6 +191,14 @@
 	- AJAX + ko 'foreach' binding (dynamic!)
 	- Add to cart button with ko 'attr' binding
 - Dynamic Shopping Cart
+	- Create AddToCart API
+	- Update AddToCart button with 'click' binding
+	- Dynamically update button + State (ko.observable)
+	- Add RemoveFromCart + Dynamic update
+	- Using sammy + ko for #cart and #home routing
+	- Complete #cart UI
+	- Enable RemoveFromCart on #cart UI
+	- Dynamic updating with observableArrays
 
 
 
