@@ -24,7 +24,7 @@ namespace Project10_ShoppingDataDumper
             request.AddJsonBody(data);
             var response = client.Execute<List<MobilePhoneDataModel>>(request);
 
-            using var context = new ShoppingDbContext();
+            /*using var context = new ShoppingDbContext();
             Random _random = new Random();
             foreach (MobilePhoneDataModel d in response.Data)
             {
@@ -32,8 +32,9 @@ namespace Project10_ShoppingDataDumper
                 d.Price = _random.Next(400,1400).ToString();
                 context.MobilePhoneData.Add(d);
             }
+            */
             // updating database
-            context.SaveChanges();
+            //context.SaveChanges();
             //Console.WriteLine(response.Data);
         }
     }
